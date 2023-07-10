@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class LoadScreen extends StatefulWidget {
+  const LoadScreen({super.key});
+
   @override
   _LoadScreenState createState() => _LoadScreenState();
 }
