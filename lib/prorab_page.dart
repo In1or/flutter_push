@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-Widget adminPage() {
+Widget prorabPage() {
   Map<String, String> objects = {
-    'Йошкар-Ола, бульвар Ураева, 4-157': 'Васильев Антон Николаевич',
-    'Йошкар-Ола, улица Мира, 68-24': 'Васильев Антон Николаевич',
-    'Чебоксары, проспект Победы, 18-95': 'Евсютин Олег Максимович',
-    'Йошкар-Ола, улица Машиностроителей, 32-47': 'Леухин Степан Анатольевич'
+    'Йошкар-Ола, бульвар Ураева, 4-157': 'Ким Андрей Родионович',
+    'Йошкар-Ола, улица Мира, 68-24': 'Матвеев Дамир Рифатович',
+    'Чебоксары, проспект Победы, 18-95': 'Минин Дмитрий Максимович',
+    'Йошкар-Ола, улица Машиностроителей, 32-47': 'Павлов Игорь Александрович'
   };
   return SingleChildScrollView(
     child: Column(
@@ -71,7 +71,7 @@ Column _userInfo() {
 
 Text _userName() {
   return const Text(
-    'Иванов Максим',
+    'Леухин Степан',
     style: TextStyle(
       fontSize: 12.0,
       fontFamily: "PTSerif",
@@ -82,7 +82,7 @@ Text _userName() {
 
 Text _userPost() {
   return const Text(
-    'администратор',
+    'прораб',
     style: TextStyle(
       fontSize: 9.0,
       fontFamily: "Roboto",
@@ -138,37 +138,20 @@ Widget _menu() {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Container(
-              // как убрать левый паддинг у иконки
-              padding: const EdgeInsets.all(0.0),
-              width: 100,
-              height: 20,
-              child: ElevatedButton.icon(
+            ElevatedButton(
                 onPressed: () {},
-                icon: const Icon(
-                  Icons.add_outlined,
-                  size: 20,
-                ),
-                label: const Text(
-                  'Добавить объект',
-                  style: TextStyle(
-                    fontSize: 5,
-                    fontFamily: "Roboto",
-                  ),
-                ),
                 style: ElevatedButton.styleFrom(
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.zero,
-                    ),
-                    backgroundColor: Colors.transparent,
-                    elevation: 0.0,
-                    shadowColor: Colors.transparent,
-                    side: const BorderSide(
-                      width: 0.5,
-                      color: Colors.white,
-                    )),
-              ),
-            ),
+                  backgroundColor: Colors.transparent,
+                  elevation: 0.0,
+                  shadowColor: Colors.transparent,
+                ),
+                child: const Text(
+                  'Взятые в работу объекты',
+                  style: TextStyle(
+                    fontFamily: "Roboto",
+                    fontSize: 5,
+                  ),
+                )),
             ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -179,8 +162,8 @@ Widget _menu() {
                 child: const Text(
                   'Переданные объекты',
                   style: TextStyle(
-                    fontSize: 5,
                     fontFamily: "Roboto",
+                    fontSize: 5,
                   ),
                 )),
             ElevatedButton(
@@ -191,10 +174,11 @@ Widget _menu() {
                   shadowColor: Colors.transparent,
                 ),
                 child: const Text(
-                  'Сохраненные объекты',
+                  'Объекты на проверке',
                   style: TextStyle(
                     fontSize: 5,
                     fontFamily: "Roboto",
+                    decoration: TextDecoration.underline,
                   ),
                 )),
             ElevatedButton(
@@ -205,7 +189,7 @@ Widget _menu() {
                   shadowColor: Colors.transparent,
                 ),
                 child: const Text(
-                  'Завершенные объекты',
+                  'Проверенные объекты',
                   style: TextStyle(
                     fontSize: 5,
                     fontFamily: "Roboto",
@@ -245,7 +229,7 @@ Widget _searchBar() {
           const Padding(
             padding: EdgeInsets.only(left: 5),
             child: Text(
-              'сортировать по',
+              'сортировать по бригадирам',
               style: TextStyle(fontFamily: 'Roboto', fontSize: 5),
             ),
           ),

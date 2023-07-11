@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_push/loadingScreen.dart';
-
+import 'admin_page.dart';
+import 'prorab_page.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: LoadScreen()
+        home: Scaffold(body: prorabPage())
     );
   }
 }
