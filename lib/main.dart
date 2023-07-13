@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'admin_page.dart';
+
+import 'admin_page/admin_page.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -8,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: adminPage(),
+        body: AdminPage(),
       ),
     );
   }
