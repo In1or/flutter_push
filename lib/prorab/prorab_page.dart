@@ -11,7 +11,7 @@ Widget prorabPage() {
   return SingleChildScrollView(
     child: Column(
       children: <Widget>[
-        _header(),
+        header(),
         _menu(),
         _searchBar(),
         _objects(objects),
@@ -20,7 +20,7 @@ Widget prorabPage() {
   );
 }
 
-Widget _header() {
+Widget header() {
   return Padding(
     padding: const EdgeInsets.only(top: 30, left: 10),
     child: Row(
@@ -229,7 +229,7 @@ Widget _searchBar() {
           const Padding(
             padding: EdgeInsets.only(left: 5),
             child: Text(
-              'сортировать по бригадирам',
+              'сортировать по',
               style: TextStyle(fontFamily: 'Roboto', fontSize: 5),
             ),
           ),

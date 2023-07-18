@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_push/loadingScreen.dart';
 import 'admin_page.dart';
-import 'prorab_page.dart';
+import 'prorab/prorab_page.dart';
+import 'prorab/prorab_page2.dart';
+import 'prorab/prorab_page3.dart';
+import 'prorab/prorab_page4.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
           // closer together (more dense) than on mobile platforms.
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Scaffold(body: prorabPage())
+        home: Scaffold(body: addObject2())
     );
   }
 }
